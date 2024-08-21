@@ -1,3 +1,4 @@
+import 'package:al_quran_app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -31,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: screenSize.height / 1,
                 alignment: Alignment.center,
                 child: Image.asset(
-                  'assets/icons/quran.png',
+                  AppImage.image,
                   width: screenSize.width / 5,
                 )),
           ],
