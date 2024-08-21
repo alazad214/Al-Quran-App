@@ -5,6 +5,15 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        appBar: AppBar(
+          leading: const Icon(Icons.sort),
+          title: const Text('Quran App'),
+          titleSpacing: 0,
+          actions: const [Icon(Icons.search_rounded)],
+        ),
+        body: const Column(
+          children: [],
+        ));
   }
 }

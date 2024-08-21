@@ -1,7 +1,8 @@
 import 'package:al_quran_app/app/moduls/home/view/home_screen.dart';
+import 'package:al_quran_app/app/moduls/splash/view/splash.dart';
+import 'package:al_quran_app/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -58,7 +59,7 @@ class IntroScreen extends StatelessWidget {
                           child: const Text("Let's Go"),
                         ))
                   ],
-                )
+                ),
               ],
             ),
           ),
