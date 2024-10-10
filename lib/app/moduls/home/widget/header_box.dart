@@ -12,8 +12,10 @@ class HeaderBox extends StatelessWidget {
       padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         color: Colors.blue.shade50,
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(),
+        borderRadius: BorderRadius.circular(8.0),
+        border: Border.all(
+           color: Colors.black12
+        ),
       ),
       child: Row(
         children: [
@@ -24,9 +26,14 @@ class HeaderBox extends StatelessWidget {
           ),
           Expanded(
               flex: 2,
-              child: Image.asset(
-                AppImage.image,
-                height: 120.0,
+              child: Container(
+                clipBehavior: Clip.antiAlias,
+                decoration:
+                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                child: Image.asset(
+                  appLogo,
+                  height: 120.0,
+                ),
               ))
         ],
       ),

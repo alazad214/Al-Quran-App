@@ -1,15 +1,19 @@
 import 'dart:ui';
 
-class AppColor {
-  static const Color basecolor = Color(0xff276070);
-  static const Color baseColor = Color(0xff008080);
-  static const Color color_4 = Color(0xff276070);
-  static const Color marron_ = Color(0xff4b1f1f);
-  static const Color white_1 = Color(0xffffffff);
-  static const Color green_ = Color(0xff00360b);
-  static const Color denim_ = Color(0xff52869f);
-  static const Color denim_2 = Color(0xff3e5e70);
-  static const Color black_ = Color(0xff000000);
-  static const Color navy_ = Color(0xff244855);
-  static const Color navy2 = Color(0xffd0ff00);
-}
+const Color primaryColor = Color(0xFF021526);
+const Color secondaryColor = Color(0xFF2482C4);
+const Color scaffoldBackground = Color(0xFF1A4870);
+const Color coloredBackground = Color(0xFF1F316F);
+const Color blueBlackColor = Color(0xFF021526);
+
+const Color appColor = Color(0xFF384B70);
+const Color appColor2 = Color(0xFF507687);
+const Color appColor3 = Color(0xFFFCFAEE);
+const Color appColor4 = Color(0xFFB8001F);
+const Color appColor5 = Color(0xFF94B49F);
+const Color appColor6 = Color(0xFF387478);
+const Color appColor7 = Color(0xFF1F6E8C);
+const Color appColor8 = Color(0xFF1B9C85);
+const Color whiteColor = Color(0xFFFFFFFF);
+const Color blackColor = Color(0xFF000000);
+const Color blackColor2 = Color(0xFF706969);

@@ -1,3 +1,2 @@
-class AppImage {
-  static const image = 'assets/icons/quranlogo.png';
-}
+const image = 'assets/icons/quranlogo.png';
+const appLogo = 'assets/logo/logo.png';

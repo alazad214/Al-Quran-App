@@ -1,8 +1,7 @@
 import 'package:al_quran_app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../intro screen/view/intro_screen.dart';
+import '../../onboading/views/onboading_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -14,8 +13,8 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    Future.delayed(const Duration(seconds: 2), () {
-      Get.to(() => const IntroScreen());
+    Future.delayed(const Duration(seconds: 3), () {
+      Get.to(() => const OnboadingScreen());
     });
     super.initState();
   }
@@ -24,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.cyan.shade100,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: ListView(
           children: [
@@ -32,8 +31,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 height: screenSize.height / 1,
                 alignment: Alignment.center,
                 child: Image.asset(
-                  AppImage.image,
-                  width: screenSize.width / 5,
+                  appLogo,
+                  width: screenSize.width / 3,
                 )),
           ],
         ),
