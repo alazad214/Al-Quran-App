@@ -21,7 +21,7 @@ class OnboadingTitleSubtitle extends StatelessWidget {
           textAlign: TextAlign.center,
           'Quickly retrieve your secured files and information with a simple tap.',
           style: TextStyle(
-            color: primaryColor,
+            color: Colors.black38,
             fontSize: 14,
           ),
         ),

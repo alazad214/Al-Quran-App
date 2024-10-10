@@ -12,23 +12,19 @@ class OnboadingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: appColor3,
       body: Padding(
         padding: const EdgeInsets.only(
-            left: 15.0, right: 15.0, top: 10.0, bottom: 30.0),
+            left: 15.0, right: 15.0, top: 30.0, bottom: 30.0),
         child: ListView(
-          children: [
-            Container(
-              height: screenSize.height / 10,
-            ),
-            const OnboadingTitleSubtitle(),
-            const PrivacyPermisionBox(),
-            const PrivacyPermisionCheckupText(),
-            const AgreeContinueButton(),
-            const SizedBox(height: 15),
-            const DesagreeButton()
+          children: const [
+            OnboadingTitleSubtitle(),
+            PrivacyPermisionBox(),
+            PrivacyPermisionCheckupText(),
+            AgreeContinueButton(),
+            SizedBox(height: 15),
+            DesagreeButton()
           ],
         ),
       ),

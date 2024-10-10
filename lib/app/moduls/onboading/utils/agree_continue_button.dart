@@ -1,13 +1,10 @@
-import 'package:al_quran_app/app/moduls/home/view/home_screen.dart';
+import 'package:al_quran_app/app/moduls/quran/views/quran_screen.dart';
 import 'package:al_quran_app/widgets/app_button.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
-
+import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../utils/app_colors.dart';
-import '../../../logic/service/shared_service.dart';
-import '../../quran/views/quran_screen.dart';
+import '../../../../utils/app_config.dart';
 
 class AgreeContinueButton extends StatelessWidget {
   const AgreeContinueButton({super.key});
@@ -17,13 +14,62 @@ class AgreeContinueButton extends StatelessWidget {
     return AppButton(
       text: 'Agree & Continue',
       ontap: () async {
-        Get.offAll(() =>  QuranScreen());
-        await SharedServices().setData(SetType.bool, 'already_opened', true);
-        Fluttertoast.showToast(
-          backgroundColor: appColor8,
-          msg:
-              'You are aware of all permissions and privacy policies of this app',
-        );
+        Get.defaultDialog(
+            backgroundColor: appColor3,
+            title: 'If Exit, you will not use $appName',
+            titleStyle: const TextStyle(
+                color: primaryColor,
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold),
+            content: Column(
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                  child: RichText(
+                    text: const TextSpan(children: [
+                      TextSpan(
+                          text:
+                              "By Continuing To Use  $appName . You agree to our  ",
+                          style: TextStyle(color: primaryColor)),
+                      TextSpan(
+                          text: 'Privacy Policy ',
+                          style: TextStyle(color: secondaryColor)),
+                      TextSpan(text: 'And  '),
+                      TextSpan(
+                          text: 'Permissions.',
+                          style: TextStyle(color: secondaryColor)),
+                    ]),
+                  ),
+                ),
+              ],
+            ),
+            actions: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Get.back();
+                      },
+                      child: const Text(
+                        'back',
+                      )),
+                  TextButton(
+                      onPressed: () async {
+                        SharedPreferences prefs =
+                            await SharedPreferences.getInstance();
+                        await prefs.setBool('agreed', true);
+
+                        Get.offAll(() => QuranScreen());
+                      },
+                      child: const Text(
+                        'Continue',
+                        style: TextStyle(color: primaryColor),
+                      )),
+                ],
+              )
+            ]);
       },
     );
   }

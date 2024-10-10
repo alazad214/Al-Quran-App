@@ -14,8 +14,9 @@ class PrivacyPermisionBox extends StatelessWidget {
       margin:
           const EdgeInsets.only(top: 20.0, left: 15, right: 15, bottom: 15.0),
       decoration: BoxDecoration(
-        border: Border.all(width: 0.1),
-          borderRadius: BorderRadius.circular(8.0), color: whiteColor),
+          border: Border.all(width: 0.1, color: Colors.black38),
+          borderRadius: BorderRadius.circular(6.0),
+          color: whiteColor),
       child: const SingleChildScrollView(
         child: Column(
           children: [
@@ -34,7 +35,7 @@ class PrivacyPermisionBox extends StatelessWidget {
               textAlign: TextAlign.start,
               AppString.privacyAndPermissions,
               style: TextStyle(
-                color: primaryColor,
+                color: Colors.black54,
                 fontSize: 14,
               ),
             ),

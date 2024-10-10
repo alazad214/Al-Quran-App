@@ -3,10 +3,8 @@ import 'package:al_quran_app/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_config.dart';
-import '../../quran/views/quran_screen.dart';
 
 class DesagreeButton extends StatelessWidget {
   const DesagreeButton({super.key});
@@ -61,10 +59,10 @@ class DesagreeButton extends StatelessWidget {
                       )),
                   TextButton(
                       onPressed: () {
-                        Get.offAll(() => QuranScreen());
+                        Get.back();
                       },
                       child: const Text(
-                        'Continue',
+                        'back',
                         style: TextStyle(color: primaryColor),
                       )),
                 ],
