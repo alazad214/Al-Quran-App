@@ -1,0 +1,2 @@
+D:/Projects/Al-Quran-App/android/app/.cxx/Debug/3x5u2t3e/x86/CMakeFiles/edit_cache.dir
+D:/Projects/Al-Quran-App/android/app/.cxx/Debug/3x5u2t3e/x86/CMakeFiles/rebuild_cache.dir

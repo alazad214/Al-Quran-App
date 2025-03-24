@@ -1,4 +1,3 @@
-import 'package:al_quran_app/app/moduls/home/view/home_screen.dart';
 import 'package:al_quran_app/widgets/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
