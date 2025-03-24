@@ -11,7 +11,7 @@ class OnboadingTitleSubtitle extends StatelessWidget {
       children: [
         Text(
           textAlign: TextAlign.center,
-          'Easily Access, Fully Secure.',
+          'Discover the Beauty of the Quran.',
           style: TextStyle(
               color: scaffoldBackground,
               fontSize: 22,
@@ -19,7 +19,7 @@ class OnboadingTitleSubtitle extends StatelessWidget {
         ),
         Text(
           textAlign: TextAlign.center,
-          'Quickly retrieve your secured files and information with a simple tap.',
+          'Explore the divine verses with easy access and a peaceful experience.',
           style: TextStyle(
             color: Colors.black38,
             fontSize: 14,

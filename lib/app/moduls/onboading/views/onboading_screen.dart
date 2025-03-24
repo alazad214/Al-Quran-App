@@ -5,7 +5,6 @@ import '../utils/agree_continue_button.dart';
 import '../utils/desagree_button.dart';
 import '../utils/onboading_title_subtitle.dart';
 import '../utils/privacy_permision_box.dart';
-import '../utils/privacy_permision_checkup_text.dart';
 
 class OnboadingScreen extends StatelessWidget {
   const OnboadingScreen({super.key});
@@ -21,7 +20,7 @@ class OnboadingScreen extends StatelessWidget {
           children: const [
             OnboadingTitleSubtitle(),
             PrivacyPermisionBox(),
-            PrivacyPermisionCheckupText(),
+    
             AgreeContinueButton(),
             SizedBox(height: 15),
             DesagreeButton()

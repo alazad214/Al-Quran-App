@@ -1,9 +1,9 @@
 import 'package:al_quran_app/utils/app_images.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart'; // import this
+import 'package:shared_preferences/shared_preferences.dart'; 
 import '../../onboading/views/onboading_screen.dart';
-import '../../quran/views/quran_screen.dart'; // import QuranScreen
+import '../../quran/views/quran_screen.dart'; 
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

@@ -16,6 +16,7 @@ class DesagreeButton extends StatelessWidget {
       color: primaryColor,
       ontap: () {
         Get.defaultDialog(
+             titlePadding: const EdgeInsets.only(top: 20),
             backgroundColor: appColor3,
             title: 'If Desagree, you will not use to $appName',
             titleStyle: const TextStyle(
@@ -26,20 +27,20 @@ class DesagreeButton extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: RichText(
                     text: const TextSpan(children: [
                       TextSpan(
                           text:
                               "By Continuing To Use  $appName . You agree to our  ",
-                          style: TextStyle(color: primaryColor)),
+                          style: TextStyle(color: primaryColor,  fontSize: 16,)),
                       TextSpan(
                           text: 'Privacy Policy ',
-                          style: TextStyle(color: secondaryColor)),
-                      TextSpan(text: 'And  '),
+                          style: TextStyle(color: secondaryColor,  fontSize: 16,)),
+                      TextSpan(text: 'And  ', style: TextStyle(color: primaryColor,   fontSize: 16,)),
                       TextSpan(
                           text: 'Permissions.',
-                          style: TextStyle(color: secondaryColor)),
+                          style: TextStyle(color: secondaryColor,   fontSize: 16,)),
                     ]),
                   ),
                 ),
@@ -55,6 +56,10 @@ class DesagreeButton extends StatelessWidget {
                       },
                       child: const Text(
                         'Exit',
+                                      style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 16,
+                        ),
                       )),
                   TextButton(
                       onPressed: () {
@@ -62,11 +67,15 @@ class DesagreeButton extends StatelessWidget {
                       },
                       child: const Text(
                         'back',
-                        style: TextStyle(color: primaryColor),
+                        style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 16,
+                        ),
                       )),
                 ],
               )
             ]);
+  
       },
     );
   }

@@ -15,8 +15,10 @@ class AgreeContinueButton extends StatelessWidget {
       text: 'Agree & Continue',
       ontap: () async {
         Get.defaultDialog(
+          titlePadding: const EdgeInsets.only(top: 20),
             backgroundColor: appColor3,
             title: 'If Exit, you will not use $appName',
+            
             titleStyle: const TextStyle(
                 color: primaryColor,
                 fontSize: 16.0,
@@ -25,20 +27,20 @@ class AgreeContinueButton extends StatelessWidget {
               children: [
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                   child: RichText(
                     text: const TextSpan(children: [
                       TextSpan(
                           text:
                               "By Continuing To Use  $appName . You agree to our  ",
-                          style: TextStyle(color: primaryColor)),
+                          style: TextStyle(color: primaryColor,   fontSize: 16,)),
                       TextSpan(
                           text: 'Privacy Policy ',
-                          style: TextStyle(color: secondaryColor)),
-                      TextSpan(text: 'And  '),
+                          style: TextStyle(color: secondaryColor,   fontSize: 16,)),
+                      TextSpan(text: 'And ', style: TextStyle(color: primaryColor,   fontSize: 16,)),
                       TextSpan(
                           text: 'Permissions.',
-                          style: TextStyle(color: secondaryColor)),
+                          style: TextStyle(color: secondaryColor,   fontSize: 16,)),
                     ]),
                   ),
                 ),
@@ -54,6 +56,10 @@ class AgreeContinueButton extends StatelessWidget {
                       },
                       child: const Text(
                         'back',
+                                style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 16,
+                        ),
                       )),
                   TextButton(
                       onPressed: () async {
@@ -65,11 +71,15 @@ class AgreeContinueButton extends StatelessWidget {
                       },
                       child: const Text(
                         'Continue',
-                        style: TextStyle(color: primaryColor),
+                        style: TextStyle(
+                          color: primaryColor,
+                          fontSize: 16,
+                        ),
                       )),
                 ],
               )
             ]);
+     
       },
     );
   }
