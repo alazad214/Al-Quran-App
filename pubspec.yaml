@@ -40,6 +40,7 @@ dependencies:
   fluttertoast: ^8.2.8
   toastification: ^3.0.2
   shared_preferences: ^2.5.2
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

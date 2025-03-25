@@ -1,5 +1,7 @@
 import 'dart:math';
 import 'package:al_quran_app/app/moduls/quran/views/quran_details.dart';
+import 'package:al_quran_app/app/moduls/quran/widgets/shimmer_widget.dart';
+import 'package:al_quran_app/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../logic/controller/quran_controller.dart';
@@ -12,9 +14,11 @@ class QuranScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bg,
       appBar: AppBar(
+        backgroundColor: bg,
         title: const Text(
-          'Al Quran',
+          'Din Guide',
           style: TextStyle(
             color: Colors.blue,
             fontSize: 16,
@@ -30,27 +34,22 @@ class QuranScreen extends StatelessWidget {
             const SizedBox(height: 20),
             Obx(() {
               if (quranController.isLoading.value) {
-                return const Center(
-                  child: CircularProgressIndicator(),
-                );
+                return buildShimmerList();
               } else if (quranController.quranData.value.data?.surahs == null) {
                 return const Center(
                   child: Text("No Surahs available."),
                 );
               } else {
                 final surahs = quranController.quranData.value.data!.surahs;
-
                 return ListView.builder(
                   shrinkWrap: true,
                   primary: false,
                   itemCount: surahs!.length,
                   itemBuilder: (context, index) {
                     var surah = surahs[index];
-
                     Color randomColor =
                         Color((Random().nextDouble() * 0xFFFFFF).toInt())
                             .withOpacity(0.2);
-
                     return Card(
                       color: Colors.white,
                       child: ListTile(
@@ -89,4 +88,5 @@ class QuranScreen extends StatelessWidget {
       ),
     );
   }
+
 }

@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:al_quran_app/app/moduls/quran/widgets/details_dialog.dart';
 import 'package:flutter/material.dart';
 import '../../../logic/model/quran_model.dart';
 
@@ -140,26 +139,15 @@ class SurahDetailScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(color: Colors.black12, width: 0.3)),
-                  child: InkWell(
-                    onTap: () {
-                      detailsDialog(
-                          context,
-                          "${ayah.number ?? ''}",
-                          "${ayah.juz ?? ''}",
-                          "${ayah.manzil ?? ''}",
-                          "${ayah.ruku ?? ''}",
-                          "${ayah.hizbQuarter ?? ''}");
-                    },
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundColor: randomColor,
-                        child: Text(
-                          "${ayah.numberInSurah}",
-                          style: const TextStyle(fontWeight: FontWeight.bold),
-                        ),
+                  child: ListTile(
+                    leading: CircleAvatar(
+                      backgroundColor: randomColor,
+                      child: Text(
+                        "${ayah.numberInSurah}",
+                        style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
-                      title: Text(' ${ayah.text ?? 'N/A'}'),
                     ),
+                    title: Text(' ${ayah.text ?? 'N/A'}'),
                   ),
                 );
               },

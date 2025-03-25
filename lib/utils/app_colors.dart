@@ -17,3 +17,4 @@ const Color appColor8 = Color(0xFF1B9C85);
 const Color whiteColor = Color(0xFFFFFFFF);
 const Color blackColor = Color(0xFF000000);
 const Color blackColor2 = Color(0xFF706969);
+const Color bg = Color.fromARGB(255, 250, 255, 241);

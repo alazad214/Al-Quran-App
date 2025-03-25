@@ -10,11 +10,13 @@ class HeaderBox extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(12.0),
+      margin: const EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         color: Colors.blue.shade50,
         borderRadius: BorderRadius.circular(8.0),
         border: Border.all(
-           color: Colors.black12
+           color: Colors.black12,
+           width: 0.1
         ),
       ),
       child: Row(
